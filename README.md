@@ -11,7 +11,7 @@ Creates a sliding window with 5 buckets and adds to the counter, advances the sl
 window and prints the accumulator value every 100 iterations.
 
 ```java
-import com.github.tnewman.concurrentslidingwindow.SlidingWindowCounter;
+import com.github.tnewman.slidingwindowcounter.SlidingWindowCounter;
 
 public class Example {
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ using a timer to advance the window. The counter is continuously updated
 until the thread is interrupted. The count is reported every 60 seconds.
 
 ```java
-import com.github.tnewman.concurrentslidingwindow.SlidingWindowCounter;
+import com.github.tnewman.slidingwindowcounter.SlidingWindowCounter;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;

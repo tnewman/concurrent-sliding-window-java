@@ -10,5 +10,5 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "concurrent-sliding-window"
+rootProject.name = "sliding-window-counter"
 include("lib")

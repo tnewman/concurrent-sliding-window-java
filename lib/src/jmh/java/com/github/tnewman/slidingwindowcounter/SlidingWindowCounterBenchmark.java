@@ -1,4 +1,4 @@
-package com.github.tnewman.concurrentslidingwindow;
+package com.github.tnewman.slidingwindowcounter;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
