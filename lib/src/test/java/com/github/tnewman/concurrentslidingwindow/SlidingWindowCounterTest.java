@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-class SlidingWindowTest {
+class SlidingWindowCounterTest {
 
   @Test
   void testBasicUsage() {
-    SlidingWindow window = new SlidingWindow(5);
+    SlidingWindowCounter window = new SlidingWindowCounter(5);
 
     window.add(10);
     window.add(20);
@@ -28,7 +28,7 @@ class SlidingWindowTest {
   @ParameterizedTest(name = "test eviction with window size {0}")
   @ValueSource(ints = {2, 3, 5, 10})
   void testEvictionParameterized(int size) {
-    SlidingWindow window = new SlidingWindow(size);
+    SlidingWindowCounter window = new SlidingWindowCounter(size);
 
     long totalAdded = 0;
 
@@ -64,7 +64,7 @@ class SlidingWindowTest {
   void testConcurrency() throws InterruptedException {
     int threads = 10;
     int additionsPerThread = 1000;
-    SlidingWindow window = new SlidingWindow(5);
+    SlidingWindowCounter window = new SlidingWindowCounter(5);
     ExecutorService executor = Executors.newFixedThreadPool(threads);
     CountDownLatch latch = new CountDownLatch(threads);
 

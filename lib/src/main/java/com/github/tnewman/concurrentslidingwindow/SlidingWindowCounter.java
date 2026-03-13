@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
-public class SlidingWindow {
+public class SlidingWindowCounter {
 
   private final int size;
 
@@ -17,7 +17,7 @@ public class SlidingWindow {
 
   private final AtomicLong accumulator;
 
-  public SlidingWindow(final int size) {
+  public SlidingWindowCounter(final int size) {
     this.size = size;
 
     this.filled = new AtomicBoolean(false);
