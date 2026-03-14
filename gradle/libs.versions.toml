@@ -6,6 +6,7 @@ junit-jupiter = "6.0.1"
 junit-platform = "1.11.0"
 jmh = "1.37"
 jmh-gradle-plugin = "0.7.3"
+maven-publish = "0.36.0"
 spotless = "8.3.0"
 
 [libraries]
@@ -17,3 +18,4 @@ jmh-annprocess = { module = "org.openjdk.jmh:jmh-generator-annprocess", version.
 [plugins]
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 jmh = { id = "me.champeau.jmh", version.ref = "jmh-gradle-plugin" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
