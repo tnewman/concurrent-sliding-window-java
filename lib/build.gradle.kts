@@ -49,11 +49,15 @@ spotless {
     }
 }
 
+val group: String by project
+val artifact: String by project
+val version: String by project
+
 mavenPublishing {
   publishToMavenCentral()
   signAllPublications()
 
-  coordinates(group.toString(), artifact.toString(), version.toString())
+  coordinates(group, artifact, version)
 
   pom {
     name.set("Sliding Window Counter")
