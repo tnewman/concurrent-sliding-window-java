@@ -1,5 +1,8 @@
 name: CI/CD Pipeline
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -22,6 +25,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'gradle'
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ['java-kotlin', 'actions']
+          build-mode: none
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v5
