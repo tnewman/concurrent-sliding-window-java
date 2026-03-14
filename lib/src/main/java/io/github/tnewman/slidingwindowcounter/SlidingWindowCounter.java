@@ -1,4 +1,4 @@
-package com.github.tnewman.slidingwindowcounter;
+package io.github.tnewman.slidingwindowcounter;
 
 import java.util.concurrent.atomic.AtomicLongArray;
 import java.util.concurrent.atomic.LongAdder;

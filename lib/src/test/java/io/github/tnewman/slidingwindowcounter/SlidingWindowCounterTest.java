@@ -1,4 +1,4 @@
-package com.github.tnewman.slidingwindowcounter;
+package io.github.tnewman.slidingwindowcounter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
