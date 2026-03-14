@@ -62,4 +62,4 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
       - name: Publish Snapshot to Maven Central
-        run: ./gradlew publishToMavenCentral -Pversion=${{ env.RELEASE_VERSION }}
+        run: ./gradlew publishToMavenCentral --no-configuration-cache -Pversion=${{ env.RELEASE_VERSION }}
